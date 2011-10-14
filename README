@@ -1,0 +1,27 @@
+==============================================
+U DIG? - Emergent platformer built with Flixel
+
+Author: Tim 'mktwo' van der Rest, 2011
+==============================================
+
+
+INFO:
+-Images, sprites, etc. found in /content/
+-Built with Flixel 2.55, in FlashDevelop
+-Free to use for whatever purpose!
+-No credits, money, coffee, or license necessary!
+-Use ANY part for FREE!
+-Seriously though, it's FREE TO USE!
+
+
+CONTROLS:
+-A & D     =  Walk left/right
+-Spacebar  = Jump
+-G (Hold)  = Slow-motion
+-Click     = Remove a tile
+-CTRL+Click= Add a tile
+
+
+KNOWN ISSUES - as of 14 Oct 2011:
+-Boring!
+-Tiles are not auto-tiling when changed at runtime
