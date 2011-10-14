@@ -18,6 +18,8 @@ CONTROLS:
 -A & D     =  Walk left/right
 -Spacebar  = Jump
 -G (Hold)  = Slow-motion
+-C         = Open Crafting menu
+-Esc       = Close Crafting menu
 -Click     = Remove a tile
 -CTRL+Click= Add a tile
 
@@ -25,3 +27,7 @@ CONTROLS:
 KNOWN ISSUES - as of 14 Oct 2011:
 -Boring!
 -Tiles are not auto-tiling when changed at runtime
+
+
+TO DO:
+-Add actual crafting functionality
