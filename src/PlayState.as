@@ -21,7 +21,6 @@ package
 		public var exit:FlxSprite;
 		public var coins:FlxGroup;
 		public var player:FlxSprite;
-		public var enemy1:Enemy;
 		public var score:FlxText;
 		public var status:FlxText;
 		public var toast:Toast;
@@ -153,9 +152,6 @@ package
 			player.facing = 1;
 			add(player);
 			
-			enemy1 = new Enemy(38, 8);
-			add(enemy1);
-			
 			FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
 			
 			FlxG.mouse.show(mouseGfx);
@@ -217,9 +213,6 @@ package
 				
 			if (FlxG.mouse.pressed())
 			{
-				// FlxTilemaps can be manually edited at runtime as well.
-				// Setting a tile to 0 removes it, and setting it to anything else will place a tile.
-				// If auto map is on, the map will automatically update all surrounding tiles.
 				level1.setTile(FlxG.mouse.x / tileWidth, FlxG.mouse.y / tileHeight, FlxG.keys.CONTROL?1:0, true);
 			}
 			
