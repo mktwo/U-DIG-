@@ -13,6 +13,11 @@ package
 		{
 			super(X, Y, SimpleGraphic);
 		}
+		
+		public override function update():void
+		{
+			hasSomething = false;
+		}
 	}
 
 }

@@ -14,6 +14,7 @@ package
 	public class DraggableSprite extends FlxSprite
 	{
 		public var dragging:Boolean;
+		public var onTarget:Boolean;
 		
 		public function DraggableSprite(X:Number=0,Y:Number=0,SimpleGraphic:Class=null) 
 		{
