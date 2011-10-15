@@ -86,12 +86,12 @@ package
 		{
 			super.update();
 			FlxG.overlap(invObjects, craftBlocks, DropObjToTarg);
-			FlxG.collide(invObjects, invObjects);
+			//FlxG.collide(invObjects, invObjects);
 			
 			if (!result.dragging && !result.onTarget)
 			{
-				result.x = resultBlock.x;
-				result.y = resultBlock.y;
+				result.x = resultBlock.x + 2;
+				result.y = resultBlock.y + 2;
 			}
 			
 			container.update();
@@ -101,15 +101,14 @@ package
 				result.visible = true;
 			else
 				result.visible = false;
-			
 		}
 		
 		public function DropObjToTarg(object:DraggableSprite, target:DropTarget):void
 		{
-			var objCentX:uint = object.width / 2;
-			var objCentY:uint = object.height / 2;
-			var tarCentX:uint = target.width / 2;
-			var tarCentY:uint = target.height / 2;
+			var objCentX:uint = (object.width / 2) + object.x;
+			var objCentY:uint = (object.height / 2) + object.y;
+			var tarCentX:uint = (target.width / 2) + target.x;
+			var tarCentY:uint = (target.height / 2) + target.y;
 			if (!object.dragging)
 			{
 				//Smoothly drop it on the nearest target!
@@ -123,8 +122,7 @@ package
 					object.y++;
 			}
 			
-			
-			if (object.x == target.x && object.y == target.y)
+			if (objCentX == tarCentX && objCentY == tarCentY)
 			{
 				object.onTarget = true;
 			}
