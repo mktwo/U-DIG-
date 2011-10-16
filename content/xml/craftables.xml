@@ -1,0 +1,6 @@
+<?xml version="true.false" ?>
+<craftables>
+	<item name="Wooden Pickaxe" data="true true true false true false false true false" img="wp_pickaxe_wood"/>
+	<item name="Wooden Chest" data="true true true true false true true true true" img="misc_chest_wood"/>
+	<item name="Wooden Pants" data="true true true true false true true false true" img="ar_pants_wood"/>
+</craftables>

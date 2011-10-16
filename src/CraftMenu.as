@@ -19,7 +19,7 @@ package
 		public var result:DraggableSprite;
 		public var invObjects:FlxGroup;
 		public var container:CraftContainer;
-		public var properCraft:Boolean = false;
+		public var properCraft:Boolean;
 		
 		public override function create():void
 		{
@@ -58,11 +58,15 @@ package
 			container = new CraftContainer(this);
 			
 			invObjects = new FlxGroup();
+			createInv(invObjects, 6, 200);
+			createInv(invObjects, 39, 200);
 			createInv(invObjects, 72, 200);
 			createInv(invObjects, 105, 200);
 			createInv(invObjects, 138, 200);
 			createInv(invObjects, 171, 200);
-			createInv(invObjects, 204, 200);
+			createInv(invObjects, 237, 200);
+			createInv(invObjects, 270, 200);			
+			createInv(invObjects, 303, 200);
 			add(invObjects);
 			
 			title.scrollFactor.x = title.scrollFactor.y = 0;
@@ -101,6 +105,7 @@ package
 				result.visible = true;
 			else
 				result.visible = false;
+			
 		}
 		
 		public function DropObjToTarg(object:DraggableSprite, target:DropTarget):void
