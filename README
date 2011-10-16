@@ -24,7 +24,10 @@ CONTROLS:
 -CTRL+Click= Add a tile
 
 
-KNOWN ISSUES - as of 15 Oct 2011:
--Crafting is half-working. One craft-combo for now.
+KNOWN ISSUES - as of 16 Oct 2011:
 -Boring!
 -Tiles are not auto-tiling when changed at runtime
+
+
+TO DO:
+-Build an inventory
