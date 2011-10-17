@@ -15,6 +15,9 @@ package
 		[Embed(source = '../content/icons/wp_pickaxe_wood.png')] public var wp_pickaxe_wood:Class;
 		[Embed(source = "../content/icons/wp_sword_wood.png")] public var wp_sword_wood:Class;
 		[Embed(source = "../content/icons/ar_pants_wood.png")] public var ar_pants_wood:Class;
+		[Embed(source = "../content/icons/ar_hat_wood.png")] public var ar_hat_wood:Class;
+		[Embed(source = "../content/icons/ar_torso_wood.png")] public var ar_torso_wood:Class;
+		[Embed(source = "../content/icons/ar_boots_wood.png")] public var ar_boots_wood:Class;
 		[Embed(source = "../content/icons/misc_chest_wood.png")] public var misc_chest_wood:Class;
 		public var isProper:Boolean;
 		public var array:Array;
@@ -40,7 +43,6 @@ package
 				{
 					dataArray[i] = item.@data;
 					img = item.@img;
-					trace(img);
 					imgID = item.@id;
 					imgArray[i] = img;
 					i += 1;
@@ -76,8 +78,6 @@ package
 					isProper = true;
 					stopChecking = true;
 					changeIcon(imgArray[iter]);
-					trace("Preparing change of Icon");
-					
 					owner.result.visible = true;
 				}
 				else
@@ -95,10 +95,7 @@ package
 		
 		public function changeIcon(s:String):void
 		{
-				owner.result.loadGraphic(getDefinitionByName("CraftContainer_" + s) as Class, false, false);
-			
-			
-			trace("Changed Icon...");
+			owner.result.loadGraphic(getDefinitionByName("CraftContainer_" + s) as Class, false, false);
 		}
 	}
 
